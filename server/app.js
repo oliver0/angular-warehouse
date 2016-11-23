@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var customer = require('./routes/customer.js');
 var orders = require('./routes/orders');
 var warehouse = require('./routes/warehouse');
-var products = require)'./routes/products');
+var products = require('./routes/products');
 
 // Our routes
 app.use('/warehouse', warehouse);
