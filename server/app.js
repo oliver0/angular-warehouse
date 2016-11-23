@@ -1,13 +1,9 @@
 var express = require('express');
 var app = express();
 var path = require('path');
-<<<<<<< HEAD
 var bodyParser = require('body-parser');
 var customer = require('./routes/customer.js');
-=======
-
 var orders = require('./routes/orders');
->>>>>>> master
 var warehouse = require('./routes/warehouse');
 
 // Our routes

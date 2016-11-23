@@ -15,6 +15,7 @@ app.config(['$routeProvider', function($routeProvider) {
     templateUrl: '/views/templates/customer.html',
     controller: 'CustomerController',
     controllerAs: 'customer'
+  })
   .when('/orders', {
     templateUrl: '/views/templates/orders.html',
     controller: 'OrderController',
