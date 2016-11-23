@@ -1,12 +1,18 @@
 var express = require('express');
 var app = express();
 var path = require('path');
+
 var orders = require('./routes/orders');
+var warehouse = require('./routes/warehouse');
+
+// Our routes
+app.use('/warehouse', warehouse);
+app.use('/orders', orders);
 
 // serve static files
 app.use(express.static(path.resolve('./server/public')));
 
-app.use('/orders', orders);
+
 
 // server index file
 app.get('/home', function(req, res) {
