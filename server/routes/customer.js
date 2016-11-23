@@ -12,7 +12,8 @@ router.get('/', function(req, res) {
       res.sendStatus(500);
     }
 
-    client.query('SELECT first_name, last_name FROM customers', function(err, result) {
+    client.query('SELECT first_name, last_name, COUNT(*) FROM customers JOIN addresses ON customers.id = addresses.customer_id JOIN orders ON addresses.id = orders.address_id GROUP BY first_name, last_name;',
+    function(err, result) {
       done(); // close the connection.
 
       if(err) {
