@@ -21,6 +21,11 @@ app.config(['$routeProvider', function($routeProvider) {
     controller: 'OrderController',
     controllerAs: 'orders'
   })
+  .when('/products', {
+    templateUrl: '/views/templates/products.html',
+    controller: 'ProductController',
+    controllerAs: 'products'
+  })
   .otherwise({
     redirectTo: 'home'
   });
@@ -80,3 +85,20 @@ app.controller('OrderController', ["$http", function($http) {
         });
   }
 }]); //end order controller
+
+
+app.controller('ProductController', ["$http", function($http) {
+console.log('product controller is running');
+var self = this;
+self.products = [];
+
+getProducts();
+
+function getProducts() {
+  //$.ajax
+  $http.get('/products')
+    .then(function(response) {
+      self.products = response.data;
+    });
+} // end getWarehouses function
+}]); //end app.controller
