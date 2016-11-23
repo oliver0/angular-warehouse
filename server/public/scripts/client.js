@@ -98,6 +98,7 @@ function getProducts() {
   //$.ajax
   $http.get('/products')
     .then(function(response) {
+      console.log(response.data);
       self.products = response.data;
     });
 } // end getWarehouses function

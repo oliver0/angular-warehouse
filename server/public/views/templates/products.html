@@ -1,4 +1,4 @@
-<div ng-controller="CustomerController"></div>
+<div ng-controller="ProductController"></div>
 
 <table id="productsTable" class="table">
   <thead>
@@ -9,10 +9,10 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="product in product.products">
+    <tr ng-repeat="product in products.products">
       <td>{{product.description}}</td>
       <td>{{product.unit_price}}</td>
-      <td>{{product.product_on_hand}}</td>
+      <td>{{product.on_hand}}</td>
     </tr>
 
   </tbody>
