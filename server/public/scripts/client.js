@@ -8,13 +8,26 @@ app.config(['$routeProvider', function($routeProvider) {
   })
   .when('/warehouse', {
     templateUrl: '/views/templates/warehouse.html',
-    controller: 'WarehouseController'
+    controller: 'WarehouseController',
+    controllerAs: 'warehouse'
   })
   .otherwise({
     redirectTo: 'home'
   });
 }]);
 
-app.controller('WarehouseController', function() {
-  console.log('warehouse controller running');
-}); //end app.controller
+  app.controller('WarehouseController', ["$http", function($http) {
+  console.log('warehouse controller is running');
+  var self = this;
+  self.warehouses = [];
+
+  getWarehouses();
+
+  function getWarehouses() {
+    //$.ajax
+    $http.get('/warehouse')
+      .then(function(response) {
+        self.warehouses = response.data;
+      });
+  } // end getWarehouses function
+}]); //end app.controller

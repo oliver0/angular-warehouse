@@ -5,7 +5,6 @@ var connectionString = 'postgres://localhost:5432/sigma';
 
 router.get('/', function(req, res) {
   console.log('get request');
-  // get books from DB
   pg.connect(connectionString, function(err, client, done) {
     if(err) {
       console.log('connection error: ', err);
