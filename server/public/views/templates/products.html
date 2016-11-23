@@ -1,0 +1,19 @@
+<div ng-controller="CustomerController"></div>
+
+<table id="productsTable" class="table">
+  <thead>
+    <tr>
+      <th>description</th>
+      <th>Unit Price</th>
+      <th>Product On Hand</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="product in product.products">
+      <td>{{product.description}}</td>
+      <td>{{product.unit_price}}</td>
+      <td>{{product.product_on_hand}}</td>
+    </tr>
+
+  </tbody>
+</table>
