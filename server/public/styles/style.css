@@ -1,27 +1,36 @@
 body {
   background: url('/assets/images/ricky.png') no-repeat fixed bottom right;
   background-size: 7%;
+  font-family: 'Ruda', sans-serif;
 }
 
 .nav a {
-  background: #003366;
+  background: hsla(34, 6%, 20%, 1);
   color: white;
   margin: 5px;
-  border: 1px solid #003366;
+  border: 1px solid hsla(34, 6%, 20%, 1);
 }
 
 .nav a:hover {
-  color: #003366;
+  color: hsla(34, 6%, 20%, 1);
+}
+
+.nav a:active {
+  background: hsla(34, 6%, 20%, 0.3)
+  color: hsla(34, 6%, 20%, 1);
 }
 
 #header {
-  background: url('/assets/images/header.jpg');
+  background: url('/assets/images/header.jpg') no-repeat bottom center;
   background-size: 100%;
   color: white;
+  font-family: 'Teko', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 17px;
 }
 
 footer {
-  background: #003366;
+  background: hsla(34, 6%, 20%, 1);
   bottom: 0px;
   width: 100%;
   color: white;
@@ -48,7 +57,7 @@ tr {
 }
 
 th {
-  background: #003366;
+  background: hsla(34, 6%, 20%, 1);
   color: white;
   padding: 5px;
 }
@@ -56,7 +65,11 @@ th {
 h2 {
   text-align: center;
   padding: 20px;
-  color: #003366;
-  background: hsla(210, 100%, 20%, 0.2);
+  color: hsla(34, 6%, 20%, 1);
+  background: hsla(34, 6%, 20%, 0.2);
   margin-bottom: 0px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
 }
