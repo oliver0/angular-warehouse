@@ -1,6 +1,10 @@
 var express = require('express');
 var app = express();
 var path = require('path');
+var warehouse = require('./routes/warehouse');
+
+// Our routes
+app.use('/warehouse', warehouse);
 
 
 // serve static files
