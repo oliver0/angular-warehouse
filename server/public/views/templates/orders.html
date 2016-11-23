@@ -1,0 +1,30 @@
+<h2>Orders</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Order Date</th>
+      <th>Products</th>
+      <th>Street</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Address Type</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="orderData in orders.orders">
+      <td>{{orderData.order_date}}</td>
+      <td>{{orderData.description}}</td>
+      <td>{{orderData.street}}</td>
+      <td>{{orderData.city}}</td>
+      <td>{{orderData.state}}</td>
+      <td>{{orderData.zip}}</td>
+      <td>{{orderData.address_type}}</td>
+      <td>{{orderData.first_name}}</td>
+      <td>{{orderData.last_name}}</td>
+    </tr>
+  </tbody>
+</table>
