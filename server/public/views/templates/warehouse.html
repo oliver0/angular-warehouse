@@ -1,14 +1,17 @@
 <div ng-controller="WarehouseController" class="container">
 
 <h2>Warehouse</h2>
+<label for="search" id="search">Search for an Item</label>
+<input type="text" placeholder="search" id="searchBar" class="form-control" ng-model="itemSearch">
 <table id="warehouseTable" class="table">
   <tr>
     <th>Warehouse Name</th>
     <th>Fulfillment Days</th>
   </tr>
-  <tr ng-repeat="warehouseData in warehouse.warehouses">
+  <tr ng-repeat="warehouseData in warehouse.warehouses | filter:{description:itemSearch}">
     <td>{{warehouseData.warehouse}}</td>
     <td>{{warehouseData.fulfillment_days}}</td>
+    <td ng-hide="true">{{warehouseData.description}}</td>
   </tr>
 </table>
 
