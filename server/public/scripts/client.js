@@ -21,6 +21,11 @@ app.config(['$routeProvider', function($routeProvider) {
     controller: 'OrderController',
     controllerAs: 'orders'
   })
+  .when('/products', {
+    templateUrl: '/views/templates/products.html',
+    controller: 'ProductController',
+    controllerAs: 'products'
+  })
   .otherwise({
     redirectTo: 'home'
   });
