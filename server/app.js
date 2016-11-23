@@ -3,6 +3,11 @@ var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
 var customer = require('./routes/customer.js');
+var warehouse = require('./routes/warehouse');
+
+// Our routes
+app.use('/warehouse', warehouse);
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());

@@ -1,11 +1,15 @@
-<table class="table">
-  <thead>
-    <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr></tr>
-  </tbody>
+<div ng-controller="WarehouseController" class="container">
+
+<h2>Warehouse</h2>
+<table id="warehouseTable" class="table">
+  <tr>
+    <th>Warehouse Name</th>
+    <th>Fulfillment Days</th>
+  </tr>
+  <tr ng-repeat="warehouseData in warehouse.warehouses">
+    <td>{{warehouseData.warehouse}}</td>
+    <td>{{warehouseData.fulfillment_days}}</td>
+  </tr>
 </table>
+
+</div>
