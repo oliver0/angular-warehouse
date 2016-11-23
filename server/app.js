@@ -5,17 +5,20 @@ var bodyParser = require('body-parser');
 var customer = require('./routes/customer.js');
 var orders = require('./routes/orders');
 var warehouse = require('./routes/warehouse');
+var products = require)'./routes/products');
 
 // Our routes
 app.use('/warehouse', warehouse);
 app.use('/orders', orders);
+app.use('/products', products);
+app.use('/customer', customer);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 // serve static files
 app.use(express.static(path.resolve('./server/public')));
 
-app.use('/customer', customer);
+
 
 // server index file
 app.get('/home', function(req, res) {
