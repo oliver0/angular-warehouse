@@ -1,28 +1,32 @@
-var myApp = angular.module("myApp", [])
+var app = angular.module("myApp", ['ngRoute'])
 
 app.config(['$routeProvider', function($routeProvider) {
   $routeProvider
-    .when('/customer', {
-      templateUrl: '/views/templates/customer.html',
-      controller: 'CustomerController',
-      controllerAs: 'customer'
-    })
+  .when('/customer', {
+    templateUrl: '/views/templates/customer.html',
+    controller: 'CustomerController',
+    controllerAs: 'customer'
+  }).otherwise({
+    redirectTo: 'customer'
+  })
 }]);
 
-myApp.controller("CustomerController", ["$http", function($http){
+app.controller("CustomerController", ["$http", function($http){
 
   var self = this;
 
-  self.first_names = [];
-  self.last_names = [];
+  self.customers = [];
+  getCustomers();
+  console.log("Array of customers", self.customers);
 
-  getCustomers()
+
 
   function getCustomers() {
-      $http.get('/warehouse')
-        .then(function(response) {
-          console.log(response.data);
-
-          });
-        };
+    $http.get('/customer')
+    .then(function(response) {
+      // console.log(response.data);
+      self.customers = response.data;
+      // console.log("Client side", self.customers);
+    });
+  };
 }]);

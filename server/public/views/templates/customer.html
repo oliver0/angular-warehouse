@@ -1,4 +1,6 @@
-<table class="table">
+<div ng-controller="CustomerController"></div>
+
+<table id="customerTable" class="table">
   <thead>
     <tr>
       <th>First Name</th>
@@ -6,6 +8,10 @@
     </tr>
   </thead>
   <tbody>
-    <tr></tr>
+    <tr ng-repeat="customer in customer.customers">
+      <td>{{customer.first_name}}</td>
+      <td>{{customer.last_name}}</td>
+    </tr>
+
   </tbody>
 </table>

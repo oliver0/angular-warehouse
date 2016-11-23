@@ -2,14 +2,14 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
-var warehouse = require('./routes/warehouse.js');
+var customer = require('./routes/customer.js');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 // serve static files
 app.use(express.static(path.resolve('./server/public')));
 
-app.use('/warehouse', warehouse);
+app.use('/customer', customer);
 // server index file
 app.get('/home', function(req, res) {
     res.send("hello from the server");
