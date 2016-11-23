@@ -15,6 +15,11 @@ body {
   color: hsla(34, 6%, 20%, 1);
 }
 
+.nav a:active {
+  background: hsla(34, 6%, 20%, 0.3)
+  color: hsla(34, 6%, 20%, 1);
+}
+
 #header {
   background: url('/assets/images/header.jpg') no-repeat bottom center;
   background-size: 100%;
