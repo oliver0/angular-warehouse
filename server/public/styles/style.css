@@ -1,0 +1,62 @@
+body {
+  background: url('/assets/images/ricky.png') no-repeat fixed bottom right;
+  background-size: 7%;
+}
+
+.nav a {
+  background: #003366;
+  color: white;
+  margin: 5px;
+  border: 1px solid #003366;
+}
+
+.nav a:hover {
+  color: #003366;
+}
+
+#header {
+  background: url('/assets/images/header.jpg');
+  background-size: 100%;
+  color: white;
+}
+
+footer {
+  background: #003366;
+  bottom: 0px;
+  width: 100%;
+  color: white;
+  font-size: 10px;
+  padding: 5px;
+  margin-top: 40px;
+}
+
+label {
+  margin-top: 20px;
+  text-align: center;
+}
+
+input {
+  margin-bottom: 20px;
+}
+
+table {
+  margin: 0 auto 60px auto;
+}
+
+tr {
+  background: white;
+}
+
+th {
+  background: #003366;
+  color: white;
+  padding: 5px;
+}
+
+h2 {
+  text-align: center;
+  padding: 20px;
+  color: #003366;
+  background: hsla(210, 100%, 20%, 0.2);
+  margin-bottom: 0px;
+}
